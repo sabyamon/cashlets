@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+
+#{set title:'Products In CashLets' /}
+
+<h1>Products Listed in CashLets !! </h1>
+
+
+    <p><strong>Product</strong> :
+#{list items:products, as:'product'}
+			<div style="width:100%;border : 1px solid red;">
+				<h3>${product.name}</h3>
+                <p>${product.category}</p>
+                <p>${product.subCategory}</p>
+                <p>${product.rent}</p>
+			</div>
+#{/list}
+
+</p>
+
+    
+
+    <p class="buttons">
+        <input type="submit" value="Show More">    
+    </p>
+

@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~ 
+
+GET     /					Application.index
+
+GET     /add					AddProductController.add
+POST    /add					AddProductController.addProduct
+
+GET    /products                 ListProduct.list
+
+GET     /admin              module:crud
+
+
+*       /       module:securesocial
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
